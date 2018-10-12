@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const express = require("express");
 const router = express.Router();
-const User = require("../models/user.js");
+const User = require("../models/users.js");
 const bcrypt = require("bcrypt");
 
 router.get("/signup", (req, res) => {

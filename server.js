@@ -30,18 +30,39 @@ mongoose.connect(
     { useNewUrlParser: true }
 );
 
+// //USER AUTH
+// var checkAuth = (req, res, next) => {
+//     if (
+//         typeof req.cookies.nToken === "undefined" ||
+//         req.cookies.nToken === null
+//     ) {
+//         req.user = null;
+//     } else {
+//         var token = req.cookies.nToken;
+//         var decodedToken = jwt.decode(token, { complete: true }) || {};
+//         req.user = decodedToken.payload;
+//     }
+//
+//     next();
+// };
+// app.use(checkAuth);
+
+//user routes
+const usersController = require("./controllers/users.js");
+app.use("/user", usersController);
+
 // Set the view engine and file extension
 app.engine("hbs", hbs({ defaultLayout: "main", extname: "hbs" }));
 app.set("view engine", "hbs");
 
 //index page
 app.get("/", (req, res) => {
-    res.render("posts/welcome.hbs");
+    res.send("hey");
 });
 
 //404 page
 app.get("*", (req, res) => {
-    res.render("error/index.hbs");
+    res.render("error.hbs");
 });
 
 app.listen(port, () => {
