@@ -51,6 +51,9 @@ mongoose.connect(
 const usersController = require("./controllers/users.js");
 app.use("/user", usersController);
 
+const budgetController = require("./controllers/budgets.js");
+app.use("/budget", budgetController);
+
 // Set the view engine and file extension
 app.engine("hbs", hbs({ defaultLayout: "main", extname: "hbs" }));
 app.set("view engine", "hbs");
