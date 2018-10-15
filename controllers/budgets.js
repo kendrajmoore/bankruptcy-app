@@ -24,12 +24,13 @@ router.get("/", (req, res) => {
 
 // new
 router.get("/new", (req, res) => {
-    // const currentUser = req.user;
-    // if (!currentUser) {
-    //     res.redirect("/user/login");
-    res.status(200).render("budget/new.hbs");
+    const currentUser = req.user;
+    if (!currentUser) {
+        res.redirect("/user/login");
+    } else {
+        res.status(200).render("budget/new.hbs");
+    }
 });
-// });
 // });
 
 //  create
