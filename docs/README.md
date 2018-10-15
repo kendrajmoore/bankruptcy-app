@@ -4,7 +4,7 @@ This app is intended to help with their budget and/ or file for bankruptcy
 
 **_BankruptcyApp_** Node using Express and connect to Mongo DB using Mongoose.
 
-Official documentation: https://kendrajmoore.github.io/portlandia/
+Official documentation: https://kendrajmoore.github.io/bankruptcy-app/.
 
 Official website: https://fin-app-kjm.herokuapp.com/
 
