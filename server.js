@@ -33,22 +33,22 @@ mongoose.connect(
     { useNewUrlParser: true }
 );
 
-// //USER AUTH
-// var checkAuth = (req, res, next) => {
-//     if (
-//         typeof req.cookies.nToken === "undefined" ||
-//         req.cookies.nToken === null
-//     ) {
-//         req.user = null;
-//     } else {
-//         var token = req.cookies.nToken;
-//         var decodedToken = jwt.decode(token, { complete: true }) || {};
-//         req.user = decodedToken.payload;
-//     }
-//
-//     next();
-// };
-// app.use(checkAuth);
+//USER AUTH
+var checkAuth = (req, res, next) => {
+    if (
+        typeof req.cookies.nToken === "undefined" ||
+        req.cookies.nToken === null
+    ) {
+        req.user = null;
+    } else {
+        var token = req.cookies.nToken;
+        var decodedToken = jwt.decode(token, { complete: true }) || {};
+        req.user = decodedToken.payload;
+    }
+
+    next();
+};
+app.use(checkAuth);
 
 //user routes
 const usersController = require("./controllers/users.js");
