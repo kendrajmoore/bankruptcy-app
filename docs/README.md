@@ -4,14 +4,14 @@ This app is intended to help with their budget and/ or file for bankruptcy
 
 **_BankruptcyApp_** Node using Express and connect to Mongo DB using Mongoose.
 
-Official documentation: https://kendrajmoore.github.io/bankruptcy-app/.
+Official documentation: https://kendrajmoore.github.io/bankruptcy-app/
 
 Official website: https://fin-app-kjm.herokuapp.com/
 
 ## Base URL
 
 ```
-$https://portlandia-api.herokuapp.com/
+https://fin-app-kjm.herokuapp.com/
 ```
 
 The base url contains information about all available API's resources. All responses will return data in json.
@@ -19,6 +19,13 @@ The base url contains information about all available API's resources. All respo
 There is one available resources
 
 -   Budget: CRUD a budget
+
+```
+https://fin-app-kjm.herokuapp.com/budget/
+https://fin-app-kjm.herokuapp.com/budget/new
+https://fin-app-kjm.herokuapp.com/budget/:id/edit
+https://fin-app-kjm.herokuapp.com/budget/:id/delete
+```
 
 ## Installation
 
