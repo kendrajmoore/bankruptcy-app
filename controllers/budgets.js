@@ -25,7 +25,7 @@ router.get('/new', (req, res) => {
   // if (currentUser === null) {
   //   res.redirect('/portlandia/user/login');
   // }
-  res.status(200).send('hey');
+  res.status(200).render('budget/new.hbs');
 });
 
 //  create
