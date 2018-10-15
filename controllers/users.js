@@ -45,13 +45,13 @@ router.post("/login", (req, res) => {
         .then(user => {
             if (!user) {
                 // User not found
-                return res.status(401).send({ message: "Wrong Username" });
+                return res.status(401).send({ message: "Wrong try again" });
             }
             // Check the password
             user.comparePassword(password, (err, isMatch) => {
                 if (!isMatch) {
                     // Password does not match
-                    return res.status(401).send({ message: "Wrong password" });
+                    return res.status(401).send({ message: "Wrong try again" });
                 }
                 // Create a token
                 const token = jwt.sign(
