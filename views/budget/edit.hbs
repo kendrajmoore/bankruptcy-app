@@ -1,0 +1,30 @@
+{{> header}}
+  {{> nav}}
+      <h1>New Budget</h1>
+       <div style="width: 30%; margin: 25px auto;">
+     <form method='POST' action='/budget/{{budget._id}}?_method=PUT'>
+          <h3>Add An Expense</h3>
+          <!-- <div class="form-group">
+              <label for="post-subreddit">Subreddit</label><br>
+              <input name="subreddit" type="text" placeholder="Subreddit">
+          </div> -->
+          <div class="form-group">
+              <label for="expense">Expense: </label>
+              <input type="text" name="expense" placeholder="Expense" value='{{budget.expense}}'/><br/>
+               <label for="expense">Dollar Amount: </label>
+              <input type="number" name="amount" placeholder="Expense-Amount" value='{{budget.amount}}'/><br>
+              <label for="expense">Category: </label>
+               <input type="text" name="category" placeholder="category" value='{{budget.category}}'/><br/>
+          </div>
+          <!-- <div class="form-group">
+              <label for="summary">Summary</label>
+               <textarea name="summary" class="form-control" id="post-summary" placeholder="Summary"></textarea><br/>
+          </div>
+          <div class="form-group">
+              <label for="image">Image</label><br>
+              <input type="text" name="image" placeholder="Image" />
+          </div> -->
+          <button type="submit" class="orange">Save</button>
+
+      </form>
+  </div>

@@ -1,0 +1,6 @@
+1. Associate budget with user
+2. Complete all views
+3. Add categories
+4. Update form to be dynamic
+5. Add D3js
+6. Create alternative views
