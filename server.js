@@ -5,6 +5,8 @@ const app = express();
 const hbs = require("express-handlebars");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 
 
 // Port
@@ -18,6 +20,7 @@ app.use(methodOverride("_method"));
 // Use Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 // static files middleware
 app.use(express.static("public"));
