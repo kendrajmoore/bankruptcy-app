@@ -28,8 +28,8 @@ router.get("/new", (req, res) => {
     // if (!currentUser) {
     //     res.redirect("/user/login");
     res.status(200).render("budget/new.hbs");
-    // }
 });
+// });
 // });
 
 //  create
@@ -83,7 +83,7 @@ router.delete("/:id", (req, res) => {
         res.redirect("/user/login");
     }
     Budget.findByIdAndRemove(req.params.id, (err, budget) => {
-        res.status(200).json("budget deleted");
+        res.status(200).redirect("/budget");
     }).catch(err => {
         res.status(400).send(error.message);
         console.log(err.message);
