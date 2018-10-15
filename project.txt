@@ -5,3 +5,4 @@
 5. Add D3js
 6. Create alternative views
 7. Update view if login in
+8. Add financial advice if a user needs bankruptcy
