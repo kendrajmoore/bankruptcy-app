@@ -31,10 +31,10 @@ router.get('/new', (req, res) => {
 //  create
 
 router.post('/', (req, res) => {
-  const character = new Character(req.body);
-  character.save();
+  const budget = new Budget(req.body);
+  budget.save();
   res.status(200).json({
-    character,
+    budget,
     message: 'You have submitted a new budget'
   });
 });
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
 //  Edit
 router.get('/:id/edit', (req, res) => {
   Budget.findById(req.params.id, (err, budget) => {
-    res.render('characters/edit.hbs', { budget });
+    res.render('budget/edit.hbs', { budget });
   });
 });
 
@@ -83,7 +83,7 @@ router.delete('/:id', (req, res) => {
   //   res.redirect('/portlandia/user/login');
   // }
   Budget.findByIdAndRemove(req.params.id, (err, budget) => {
-    res.status(200).json('Character deleted');
+    res.status(200).json('budget deleted');
   }).catch(err => {
     console.log(err.message);
   });
