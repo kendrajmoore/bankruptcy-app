@@ -13,9 +13,10 @@ router.get('/', (req, res) => {
   }
   Budget.find({})
         .then(budget => {
-          res.status(200).json({ budget, message: 'Get the budget' });
+          res.status(200).render({"budget/index.hbs"});
         })
         .catch(err => {
+          res.status(400).send(error.message)
           console.log(err.message);
         });
 });
