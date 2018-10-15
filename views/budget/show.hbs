@@ -1,7 +1,9 @@
 {{> header}}
 {{> nav}}
 <div class="show">
-<h3>{{budget.name}}</h3>
-<h3>{{budget.amount}}</h3>
-<h3>{{budget.category}}</h3>
+<h3>Expense: {{budget.name}}</h3>
+<h3>Dollar Amount: {{budget.amount}}</h3>
+<h3>Expense Catergory: {{budget.category}}</h3>
+  <a class="button is-success" href="  /budget/budget._id?_method=PUT">Edit</a><br>
+      <a class="button is-success" href="/budget">Back</a><br>
 </div>
