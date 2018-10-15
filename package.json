@@ -1,7 +1,6 @@
 {
   "name": "bankruptcy",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^3.0.1",
@@ -31,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/kendrajmoore/bankruptcy-app/issues"
   },
-  "homepage": "https://github.com/kendrajmoore/bankruptcy-app#readme"
+  "homepage": "https://github.com/kendrajmoore/bankruptcy-app#readme",
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
 }
