@@ -8,7 +8,6 @@ const morgan = require("morgan");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
-
 // Port
 const port = process.env.PORT || 3000;
 
@@ -21,6 +20,7 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(morgan("dev"));
 
 // static files middleware
 app.use(express.static("public"));

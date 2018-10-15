@@ -1,21 +1,15 @@
 {{> header}}
 {{> nav}}
-
 <ul>
-   <!-- For #each post... -->
-   {{#each budget}}
-       <div class="container">
-           <hr>
-           <div class="budget">
-            
-               <h3><a href="/budget/{{this._id}}">{{this.name}}</a></h3>
-               <h4>{{this.amount}}</h4>
-               <h4>{{this.category}}</h4>
-               <h4>{{this.createdAt}}</h4>
-               <h4>{{this.updatedAt}}</h4>
-
-           </div>
-           <hr>
-       </div>
-   {{/each}}
+    <!-- For #each post... -->
+    {{#each budget}}
+        <div class="container">
+            <div class="budget">
+                <h3 class="budget-title"><a href="/budget/{{this._id}}">{{this.name}}</a></h3>
+                <h4>{{this.amount}}</h4>
+                <h4>{{this.category}}</h4>
+                </div>
+            </div>
+            <hr>
+    {{/each}}
 </ul>

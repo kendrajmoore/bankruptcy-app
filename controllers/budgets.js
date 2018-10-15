@@ -6,20 +6,22 @@ const Budget = require("../models/budgets.js");
 
 const User = require("../models/users.js");
 // index;
+//index;
 router.get("/", (req, res) => {
     const currentUser = req.user;
-    if (!currentUser) {
-        res.redirect("/user/login");
+    if (currentUser === null) {
+        return res.redirect("/user/login");
     }
     Budget.find({})
         .then(budget => {
-            res.status(200).render("budget/index.hbs");
+            res.render("budget/index.hbs", { budget, currentUser });
         })
         .catch(err => {
-            res.status(400).send(error.message);
+            res.status(400).send(err.message);
             console.log(err.message);
         });
 });
+
 // new
 router.get("/new", (req, res) => {
     // const currentUser = req.user;
@@ -35,7 +37,7 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
     const budget = new Budget(req.body);
     budget.save();
-    res.status(200).render("budget/show.hbs");
+    res.redirect("/budget");
 });
 
 // show
@@ -45,15 +47,13 @@ router.get("/:id", (req, res) => {
         res.redirect("/user/login");
     }
     Budget.findById(req.params.id).then(budget => {
-        res.status(200)
-            .json({
-                budget,
-                message: "Here is the character that you selected"
-            })
-            .catch(err => {
-                res.status(400).send(error.message);
-                console.log(err.message);
-            });
+        res.render("budget/show.hbs", {
+            budget: budget,
+            currentUser: currentUser
+        }).catch(err => {
+            res.status(400).send(err.message);
+            console.log(err.message);
+        });
     });
 });
 
