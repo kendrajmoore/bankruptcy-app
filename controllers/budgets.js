@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
   }
   Budget.find({})
         .then(budget => {
-          res.status(200).render({"budget/index.hbs"});
+          res.status(200).render("budget/index.hbs");
         })
         .catch(err => {
           res.status(400).send(error.message)
@@ -23,10 +23,11 @@ router.get('/', (req, res) => {
 // new
 router.get('/new', (req, res) => {
   const currentUser = req.user;
-  if (currentUser === null) {
+  if (!currentUser) {
     res.redirect('/user/login');
-  }
+} else {
   res.status(200).render('budget/new.hbs');
+}
 });
 
 //  create
@@ -34,17 +35,16 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res) => {
   const budget = new Budget(req.body);
   budget.save();
-  res.status(200).json({
-    budget,
-    message: 'You have submitted a new budget'
-  });
+  res.status(200).render(
+ 'budget/show.hbs'
+  );
 });
 
 
 // show
 router.get('/:id', (req, res) => {
   const currentUser = req.user;
-  if (currentUser === null) {
+  if (!currentUser) {
     res.redirect('/user/login');
   }
   Budget.findById(req.params.id).then(budget => {
@@ -54,6 +54,7 @@ router.get('/:id', (req, res) => {
               message: 'Here is the character that you selected'
             })
             .catch(err => {
+            res.status(400).send(error.message)
               console.log(err.message);
             });
   });
@@ -68,24 +69,26 @@ router.get('/:id/edit', (req, res) => {
 
 router.put('/:id', (req, res) => {
   const currentUser = req.user;
-  if (currentUser === null) {
+  if (!currentUser) {
     res.redirect('/user/login');
   }
   Buget.findByIdAndUpdate(req.params.id, req.body, (err, budget) => {
     res.status(200).redirect('/');
   }).catch(err => {
+      res.status(400).send(error.message)
       console.log(err.message);
     });
 });
 //  delete
 router.delete('/:id', (req, res) => {
   const currentUser = req.user;
-  if (currentUser === null) {
+  if(!currentUser) {
     res.redirect('/user/login');
   }
   Budget.findByIdAndRemove(req.params.id, (err, budget) => {
     res.status(200).json('budget deleted');
   }).catch(err => {
+      res.status(400).send(error.message)
     console.log(err.message);
   });
 });

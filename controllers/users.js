@@ -65,6 +65,7 @@ router.post("/login", (req, res) => {
             });
         })
         .catch(err => {
+            res.status(400).send(error.message)
             console.log(err);
         });
 });
