@@ -1,0 +1,29 @@
+{{> header}}
+{{> nav}}
+
+<ul>
+   <!-- For #each post... -->
+   {{#each budget}}
+       <div class="container">
+           <hr>
+           <!-- <div class="votes">
+               <form class="vote-up" data-id="{{post._id}}">
+                   <button type="submit" class="orange">+</button>
+               </form>
+
+               <form class="vote-down" data-id="{{post._id}}">
+                   <button type="submit" class="orange">-</button>
+               </form>
+           </div> -->
+           <div class="budget">
+               <!-- <h6><a href="/n/{{this.subreddit}}">n/{{this.subreddit}}</a></h6> -->
+               <h3><a href="/budget/{{this._id}}">{{this.title}}</a></h3>
+               <img class="image" src="{{this.image}}">
+               <div class="view-votes">
+                   <h6>Votes: {{this.votes}}</h6>
+               </div>
+           </div>
+           <hr>
+       </div>
+   {{/each}}
+</ul>

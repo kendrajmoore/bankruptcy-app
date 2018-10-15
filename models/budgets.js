@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const BudgetSchema = new Schema({
-    createdAt: Date ,
-    updatedAt: Date ,
+    createdAt: Date,
+    updatedAt: Date,
     name: String,
-    amount:  String ,
+    amount:  String,
     category: String
 });
 
