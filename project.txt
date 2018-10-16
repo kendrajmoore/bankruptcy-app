@@ -3,7 +3,7 @@
 - 3. Push to heroku
   4. Update budget view
   5. User accounts
-6. Add categories
+6. Add categories, as a drop down
 7. Update form to be dynamic
 8. Add D3js
 9. Create documentation
