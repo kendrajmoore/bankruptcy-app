@@ -1,7 +1,7 @@
 - 1. Associate budget with user-check
 - 2. Complete all views - i need to fix edit, delete buttons-check
 - 3. Push to heroku
-  4. Update budget view
+  4. Update budget edit view
   5. User accounts
 6. Add categories, as a drop down
 7. Update form to be dynamic
