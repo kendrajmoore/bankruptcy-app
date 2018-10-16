@@ -1,44 +1,56 @@
 {{> header}}
 {{> nav}}
 <div class="show">
+    <br>
+    <p><a class="button is-success" href="/budget/{{budget._id}}/edit">Edit</a></p>
+          <a class="button is-success" href="/budget">Back</a><br>
+           <p><form method="POST" action="/budget/{{budget._id}}?_method=DELETE">
+              <button class="button is-danger" type="submit">Delete</button>
+          </form></p>
+    <br>
+
+    <h2>Housing</h2>
 <h3>Expense: {{budget.housingName}}</h3>
 <h3>Dollar Amount: {{budget.housingAmount}}</h3>
 <h3>Expense Catergory: {{budget.housingCategory}}</h3>
 <br>
 <br>
+<h2>Food</h2>
 <h3>Expense: {{budget.foodName}}</h3>
 <h3>Dollar Amount: {{budget.foodAmount}}</h3>
 <h3>Expense Catergory: {{budget.foodCategory}}</h3>
 <br>
 <br>
+<h2>Transporation</h2>
 <h3>Expense: {{budget.transportationName}}</h3>
 <h3>Dollar Amount: {{budget.transportationAmount}}</h3>
 <h3>Expense Catergory: {{budget.transporationCategory}}</h3>
 <br>
 <br>
+<h2>Insurance</h2>
 <h3>Expense:{{budget.insuranceName}}</h3>
 <h3>Dollar Amount: {{budget.insuranceAmount}}</h3>
 <h3>Expense Catergory: {{budget.insuranceCategory}}</h3>
 <br>
 <br>
+<h2>Clothing</h2>
 <h3>Expense: {{budget.clothingName}}</h3>
 <h3>Dollar Amount: {{budget.clothingAmount}}</h3>
 <h3>Expense Catergory: {{budget.clothingCategory}}</h3>
 <br>
 <br>
+<h2>Entertainment</h2>
 <h3>Expense: {{budget.entertainmentName}}</h3>
 <h3>Dollar Amount: {{budget.entertainmentAmount}}</h3>
 <h3>Expense Catergory: {{budget.entertainmentCategory}}</h3>
 <br>
 <br>
+<h2>Saving</h2>
 <h3>Expense: {{budget.savingName}}</h3>
 <h3>Dollar Amount: {{budget.savingAmount}}'</h3>
 <h3>Expense Catergory: {{budget.savingCategory}}</h3>
 <br>
 <br>
-<h3>Expense: {{.name}}</h3>
-<h3>Dollar Amount: {{this.amount}}</h3>
-<h3>Expense Catergory: {{this.category}}</h3>
 <p><a class="button is-success" href="/budget/{{budget._id}}/edit">Edit</a></p>
       <a class="button is-success" href="/budget">Back</a><br>
        <p><form method="POST" action="/budget/{{budget._id}}?_method=DELETE">
