@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/users.js");
 const bcrypt = require("bcrypt");
+const Budget = require("../models/budgets.js");
 
 router.get("/signup", (req, res) => {
     res.render("signup.hbs");
@@ -65,8 +66,23 @@ router.post("/login", (req, res) => {
             });
         })
         .catch(err => {
-            res.status(400).send(error.message)
+            res.status(400).send(error.message);
             console.log(err);
+        });
+});
+
+router.get("/account", (req, res) => {
+    const currentUser = req.user;
+    if (currentUser === null) {
+        res.redirect("/user/login");
+    }
+    Budget.find({})
+        .then(budget => {
+            res.render("account.hbs", { budget, currentUser });
+        })
+        .catch(err => {
+            res.status(400).send(err.message);
+            console.log(err.message);
         });
 });
 
