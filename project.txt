@@ -1,11 +1,13 @@
-1. Associate budget with user-check
-2. Complete all views - i need to fix edit, delete buttons-check
-3. Push to heroku
-4. Add categories
-4. Update form to be dynamic
-6. Add D3js
-7. Create documentation
-8. Create alternative views
-9. Update view if login in
-10. Add financial advice if a user needs bankruptcy
-11. test test test test
+- 1. Associate budget with user-check
+- 2. Complete all views - i need to fix edit, delete buttons-check
+- 3. Push to heroku
+  4. Update budget view
+  5. User accounts
+6. Add categories
+7. Update form to be dynamic
+8. Add D3js
+9. Create documentation
+10. Create alternative views
+11. Update view if login in
+11. Add financial advice if a user needs bankruptcy
+13. test test test test
