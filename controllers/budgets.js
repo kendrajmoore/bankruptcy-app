@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
 // new
 router.get("/new", (req, res) => {
     const currentUser = req.user;
-    if (!currentUser) {
+    if (currentUser === null) {
         res.redirect("/user/login");
     } else {
         res.status(200).render("budget/new.hbs");
