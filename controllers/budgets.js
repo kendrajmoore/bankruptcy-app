@@ -5,7 +5,7 @@ const router = express.Router();
 const Budget = require("../models/budgets.js");
 
 const User = require("../models/users.js");
-// index;
+
 //index;
 router.get("/", (req, res) => {
     const currentUser = req.user;
