@@ -91,4 +91,14 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+// bankruptcy new
+router.get("/bankruptcy/new", (req, res) => {
+    const currentUser = req.user;
+    if (currentUser === null) {
+        res.redirect("/user/login");
+    } else {
+        res.status(200).render("bankruptcy/new.hbs");
+    }
+});
+
 module.exports = router;

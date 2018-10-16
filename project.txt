@@ -5,7 +5,7 @@
  - 5. User accounts
 6. Add categories, as a drop down
 7. Update form to be dynamic
-8. Add D3js
+8. Add D3js or canvas
 9. Create documentation
 10. Create alternative views
 11. Update view if login in
