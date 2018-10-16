@@ -65,8 +65,22 @@
                <label for="expense">Dollar Amount: </label>
               <input type="number" name="amount" placeholder="Expense-Amount" value='{{budget.amount}}'  /><br>
               <label for="expense">Category: </label>
-               <input type="text" name="category" placeholder="category" /><br/>
+               <input type="text" name="category" placeholder="category"
+               value='{{budget.category}}'/><br/>
           </div>
+          <br>
+          <br>
+          <div class="form-group">
+              <h3>Savings</h3>
+              <label for="expense">Expense: </label>
+              <input type="text" name="name" placeholder="Expense" value='{{budget.name}}'/><br/>
+               <label for="expense">Dollar Amount: </label>
+              <input type="number" name="amount" placeholder="Expense-Amount" value='{{budget.amount}}'  /><br>
+              <label for="expense">Category: </label>
+               <input type="text" name="category" placeholder="category"  value='{{budget.category}}' /><br/>
+          </div>
+          <br>
+          <br>
 
           <button type="submit" class="orange">Save</button>
 
