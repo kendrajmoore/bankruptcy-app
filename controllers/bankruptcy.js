@@ -20,7 +20,12 @@ router.post("/", (req, res) => {
     const bankruptcy = new Bankruptcy(req.body);
     bankruptcy.save();
     if (req.body.incomeBankruptcy < 40000) {
-        res.render("bankruptcy/financialadvise.hbs", {});
+        res.render("bankruptcy/incomeadvice.hbs", {});
+    } else if (
+        req.body.mortageBankruptcy > 3000 ||
+        req.body.rentBankruptcy > 3000
+    ) {
+        res.render("bankruptcy/housingadvice.hbs", {});
     } else {
         res.render("bankruptcy/financialadvise2.hbs");
     }
