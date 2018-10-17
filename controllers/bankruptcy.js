@@ -27,8 +27,9 @@ router.post("/", (req, res) => {
     ) {
         res.render("bankruptcy/housingadvice.hbs", {});
     } else if (
-        req.body.legalBankruptcy > 5000 ||
-        req.body.medicalBankruptcy > 5000
+        req.body.pendingBankruptcy > 5000 ||
+        req.body.medicalBankruptcy > 5000 ||
+        req.body.pendingLegalBankruptcy > 5000
     ) {
         res.render("bankruptcy/medicaladvice.hbs", {});
     } else if (req.body.totalSavingBankruptcy < 5000) {
