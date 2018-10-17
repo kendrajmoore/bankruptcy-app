@@ -41,3 +41,17 @@ h3 {
     margin: 50px 0 0 10px;
     font-weight: bold;
 }
+
+.img-views {
+    margin: 50px 0 50px 350px;
+}
+
+.view {
+    text-align: center;
+    margin: 50px 0 0 10px;
+    font-weight: bold;
+}
+
+li {
+    text-align: center;
+}
