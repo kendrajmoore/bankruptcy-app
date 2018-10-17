@@ -26,6 +26,13 @@ router.post("/", (req, res) => {
         req.body.rentBankruptcy > 3000
     ) {
         res.render("bankruptcy/housingadvice.hbs", {});
+    } else if (
+        req.body.legalBankruptcy > 5000 ||
+        req.body.medicalBankruptcy > 5000
+    ) {
+        res.render("bankruptcy/medicaladvice.hbs", {});
+    } else if (req.body.totalSavingBankruptcy < 5000) {
+        res.render("bankruptcy/savingadvice.hbs", {});
     } else {
         res.render("bankruptcy/financialadvise2.hbs");
     }

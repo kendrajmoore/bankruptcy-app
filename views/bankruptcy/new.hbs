@@ -7,50 +7,50 @@
 <form action="/bankruptcy" method="POST">
 <div class="form-group">
 <h3>Income</h3>
-<label for="expense">What is your yearly income(after taxes): </label>
-<input type="number" name="incomeBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Outstanding tax obligation amount: </label></br>
-<input type="number" name="taxBankruptcy" placeholder="Expense-Amount" /><br>
+<label for="amount in dollars">What is your yearly income(after taxes): </label>
+<input type="number" name="incomeBankruptcy" placeholder="amount in dollars" /><br/>
+ <label for="amount in dollars">Outstanding tax obligation amount: </label></br>
+<input type="number" name="taxBankruptcy" placeholder="amount in dollars" /><br>
 </div>
 <br>
 <br>
 <br>
 <h3>Housing</h3>
-<label for="expense">Monthly mortage: </label></br>
-<input type="number" name="mortageBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Rent Obligation (amount * number of months): </label></br>
-<input type="number" name="rentBankruptcy" placeholder="Expense-Amount" /><br>
-<label for="expense">I own a home (Appraisal rate for house): </label></br>
-<input type="number" name="homeBankruptcy" placeholder="Expense-Amount" /><br>
+<label for="amount in dollars">Monthly mortage: </label></br>
+<input type="number" name="mortageBankruptcy" placeholder="amount in dollars" /><br/>
+ <label for="amount in dollars">Rent Obligation (amount * number of months): </label></br>
+<input type="number" name="rentBankruptcy" placeholder="amount in dollars" /><br>
+<label for="amount in dollars">I own a home (Appraisal rate for house): </label></br>
+<input type="number" name="homeBankruptcy" placeholder="amount in dollars" /><br>
 <br>
 <br>
 <h3>Transporation</h3>
-<label for="expense">Car payment: </label></br>
-<input type="number" name="carBankruptcy" placeholder="Expense" /><br/>
+<label for="amount in dollars">Car payment: </label></br>
+<input type="number" name="carBankruptcy" placeholder="amount in dollars" /><br/>
 <br>
 <br>
 <h3>Health</h3>
-<label for="expense">Do you have health insurance (Yes or No): </label>
-<input type="text" name="insuranceBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Outstanding medical bills: </label></br>
-<input type="number" name="medicalBankruptcy" placeholder="Expense-Amount" /><br>
+<label for="amount in dollars">Do you have health insurance (Yes or No): </label>
+<input type="text" name="insuranceBankruptcy" placeholder="Yes or No" /><br/>
+ <label for="amount in dollars">Outstanding medical bills: </label></br>
+<input type="number" name="medicalBankruptcy" placeholder="amount in dollars" /><br>
 <br>
 <br>
 <h3>Legal</h3>
-<label for="expense">Do you have any pending legal cases: </label>
-<input type="text" name="legalBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Do you have any pending legal settlement against you (Child support, car accident, speeding tickets): </label></br>
-<input type="number" name="pendingBankruptcy" placeholder="Expense-Amount" /><br>
-<label for="expense">Do you have pending legal fees: </label>
+<label for="amount in dollars">Do you have any pending legal cases: </label>
+<input type="text" name="legalBankruptcy" placeholder="Yes or No" /><br/>
+ <label for="amount in dollars">Do you have any pending legal settlement against you (Child support, car accident, speeding tickets): </label></br>
+<input type="number" name="pendingBankruptcy" placeholder="amount in dollars" /><br>
+<label for="amount in dollars">Do you have pending legal fees: </label>
  <input type="number" name="pendingLegalBankruptcy" placeholder="category" /><br/>
 <br>
 <br>
 <h3>Savings</h3>
-<label for="expense">Total amount in checkings account: </label>
-<input type="number" name="savingBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Total amount in savings account: </label>
-<input type="number" name="totalSavingBankruptcy" placeholder="Expense-Amount" /><br>
+<label for="amount in dollars">Total amount in checkings account: </label>
+<input type="number" name="savingBankruptcy" placeholder="amount in dollars" /><br/>
+ <label for="amount in dollars">Total amount in savings account: </label>
+<input type="number" name="totalSavingBankruptcy" placeholder="amount in dollars" /><br>
 </div>
- <a class="button is-success" href="/budget">Back</a><br>
-   <input type="submit" value="Submit">
+ <a class="button is-link" href="/budget">Back</a><br>
+   <input class="button is-success" type="submit" value="Submit">
  </form>
