@@ -6,6 +6,8 @@ const Budget = require("../models/budgets.js");
 
 const User = require("../models/users.js");
 
+const ObjectId = require("mongoose").Types.ObjectId;
+
 //index;
 router.get("/", (req, res) => {
     const currentUser = req.user;
@@ -38,7 +40,7 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
     const budget = new Budget(req.body);
     budget.save();
-    res.redirect("/budget");
+    res.redirect("/budget/:id");
 });
 
 // show

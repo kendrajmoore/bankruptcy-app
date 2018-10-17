@@ -5,66 +5,66 @@
           <h3>Housing</h3>
 
           <div class="form-group">
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="housingName" placeholder="Expense" value='{{budget.housingName}}'/><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="housingAmount" placeholder="Expense-Amount" value='{{budget.housingAmount}}'/><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="housingCategory" placeholder="category" value='{{budget.housingCategory}}'/><br/>
           </div>
           <br>
           <br>
           <div class="form-group">
               <h3>Food</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="foodName" placeholder="Expense" value='{{budget.foodName}}' /><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="foodAmount" placeholder="Expense-Amount" value='{{budget.foodAmount}}' /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="foodCategory" placeholder="category" value='{{budget.foodCategory}}' /><br/>
           </div>
           <br>
           <br>
           <div class="form-group">
               <h3>Transporation</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text"name="transportationName" placeholder="Expense" value='{{budget.transportationName}}' /><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="transportationAmount" placeholder="Expense-Amount"  value='{{budget.transportationAmount}}' /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="category" name="transportationCategory" value='{{budget.transporationCategory}}'/><br/>
           </div>
           <br>
           <br>
           <div class="form-group">
               <h3>Insurance</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="insuranceName" placeholder="Expense" value='{{budget.insuranceName}}' /><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="insuranceAmount" placeholder="Expense-Amount" value='{{budget.insuranceAmount}}' /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="insuranceCategory" placeholder="category" value='{{budget.insuranceCategory}}'/><br/>
           </div>
           <br>
           <br>
           <div class="form-group">
               <h3>Clothing</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="clothingName" placeholder="Expense" value='{{budget.clothingName}}' /><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="clothingAmount" placeholder="Expense-Amount" value='{{budget.clothingAmount}}'  /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="clothingCategory" placeholder="category"  value='{{budget.clothingCategory}}'/><br/>
           </div>
           <br>
           <br>
           <div class="form-group">
               <h3>Entertainment</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="entertainmentName" placeholder="Expense" value='{{budget.entertainmentName}}' /><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="entertainmentAmount" placeholder="Expense-Amount" value='{{budget.entertainmentAmount}}'  /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="entertainmentCategory" placeholder="category"
                value='{{budget.entertainmentCategory}}'/><br/>
           </div>
@@ -72,21 +72,21 @@
           <br>
           <div class="form-group">
               <h3>Savings</h3>
-              <label for="expense">Expense: </label>
+              <label for="expense">Expense: </label></br>
               <input type="text" name="savingName" placeholder="Expense" value='{{budget.savingName}}'/><br/>
-               <label for="expense">Dollar Amount: </label>
+               <label for="expense">Dollar Amount: </label></br>
               <input type="number" name="savingAmount" placeholder="Expense-Amount" value='{{budget.savingAmount}}'  /><br>
-              <label for="expense">Category: </label>
+              <label for="expense">Category: </label></br>
                <input type="text" name="category" placeholder="category"  value='{{budget.savingCategory}}' /><br/>
           </div>
           <br>
           <br>
-          <a class="button is-success" href="/budget">Back</a><br>
+          <a class="button is-link" href="/budget">Back</a><br>
            <p><form method="POST" action="/budget/{{budget._id}}?_method=DELETE">
               <button class="button is-danger" type="submit">Delete</button>
           </form></p>
 
-          <button type="submit" class="orange">Save</button>
+          <button type="submit" class="button is-success">Save</button>
 
       </form>
   </div>
