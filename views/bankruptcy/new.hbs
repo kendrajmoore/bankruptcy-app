@@ -4,35 +4,35 @@
 <h1>Bankruptcy Advice</h1>
 <h1>Please enter your total financial obligations</h1>
 <div style="width: 30%; margin: 25px auto;">
-<form action="/budget/bankruptcy" method="POST">
+<form action="/bankruptcy" method="POST">
 <div class="form-group">
 <h3>Income</h3>
 <label for="expense">What is your yearly income(after taxes): </label>
-<input type="text" name="housingBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Do you have an outstanding tax obligation: </label>
+<input type="number" name="housingBankruptcy" placeholder="Expense" /><br/>
+ <label for="expense">Outstanding tax obligation amount: </label></br>
 <input type="number" name="taxBankruptcy" placeholder="Expense-Amount" /><br>
 </div>
 <br>
 <br>
 <br>
 <h3>Housing</h3>
-<label for="expense">I have a mortage: </label></br>
-<input type="text" name="mortageBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">I have a rent obligation (amount * number of months): </label></br>
+<label for="expense">Monthly mortage: </label></br>
+<input type="number" name="mortageBankruptcy" placeholder="Expense" /><br/>
+ <label for="expense">Rent Obligation (amount * number of months): </label></br>
 <input type="number" name="rentBankruptcy" placeholder="Expense-Amount" /><br>
 <label for="expense">I own a home (Appraisal rate for house): </label></br>
 <input type="number" name="homeBankruptcy" placeholder="Expense-Amount" /><br>
 <br>
 <br>
 <h3>Transporation</h3>
-<label for="expense">I have a car payment: </label></br>
-<input type="text" name="carBankruptcy" placeholder="Expense" /><br/>
+<label for="expense">Car payment: </label></br>
+<input type="number" name="carBankruptcy" placeholder="Expense" /><br/>
 <br>
 <br>
 <h3>Health</h3>
 <label for="expense">Do you have health insurance (Yes or No): </label>
 <input type="text" name="insuranceBankruptcy" placeholder="Expense" /><br/>
- <label for="expense">Do you have outstanding medical bills: </label>
+ <label for="expense">Outstanding medical bills: </label></br>
 <input type="number" name="medicalBankruptcy" placeholder="Expense-Amount" /><br>
 <br>
 <br>
@@ -42,12 +42,12 @@
  <label for="expense">Do you have any pending legal settlement against you (Child support, car accident, speeding tickets): </label></br>
 <input type="number" name="pendingBankruptcy" placeholder="Expense-Amount" /><br>
 <label for="expense">Do you have pending legal fees: </label>
- <input type="text" name="pendingLegalBankruptcy" placeholder="category" /><br/>
+ <input type="number" name="pendingLegalBankruptcy" placeholder="category" /><br/>
 <br>
 <br>
 <h3>Savings</h3>
 <label for="expense">Total amount in checkings account: </label>
-<input type="text" name="savingBankruptcy" placeholder="Expense" /><br/>
+<input type="number" name="savingBankruptcy" placeholder="Expense" /><br/>
  <label for="expense">Total amount in savings account: </label>
 <input type="number" name="totalSavingBankruptcy" placeholder="Expense-Amount" /><br>
 </div>

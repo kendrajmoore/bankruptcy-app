@@ -57,6 +57,9 @@ app.use("/user", usersController);
 const budgetController = require("./controllers/budgets.js");
 app.use("/budget", budgetController);
 
+const bankruptcyController = require("./controllers/bankruptcy.js");
+app.use("/bankruptcy", bankruptcyController);
+
 // Set the view engine and file extension
 app.engine("hbs", hbs({ defaultLayout: "main", extname: "hbs" }));
 app.set("view engine", "hbs");
