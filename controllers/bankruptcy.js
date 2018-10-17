@@ -19,12 +19,12 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
     const bankruptcy = new Bankruptcy(req.body);
     bankruptcy.save();
-
-    if (req.body.income < 40000) {
-        res.render("highIncomePage", {});
+    if (req.body.incomeBankruptcy < 40000) {
+        res.render("bankruptcy/financialadvise.hbs", {});
     } else {
+        res.render("bankruptcy/financialadvise2.hbs");
     }
-    res.redirect("/budget");
+    // res.redirect("/budget");
 });
 
 module.exports = router;

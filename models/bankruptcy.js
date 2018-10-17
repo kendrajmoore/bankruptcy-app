@@ -2,9 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const BankruptcySchema = new Schema({
-    housingBankruptcy: { type: Number, default: 0 },
+    incomeBankruptcy: { type: Number, default: 0 },
     taxBankruptcy: { type: Number, default: 0 },
-    housingCategory: { type: Number, default: 0 },
     mortageBankruptcy: { type: Number, default: 0 },
     rentBankruptcy: { type: Number, default: 0 },
     homeBankruptcy: { type: Number, default: 0 },
