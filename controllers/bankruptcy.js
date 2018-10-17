@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
     } else if (req.body.totalSavingBankruptcy < 5000) {
         res.render("bankruptcy/savingadvice.hbs", {});
     } else {
-        res.render("bankruptcy/financialadvise2.hbs");
+        res.render("bankruptcy/financialadvise.hbs");
     }
     // res.redirect("/budget");
 });
