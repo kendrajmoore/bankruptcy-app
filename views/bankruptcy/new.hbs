@@ -1,11 +1,58 @@
+{{> header}}
+  {{> nav}}
+
 <h1>Bankruptcy Advice</h1>
-<input type="checkbox" name="checkbox1" value="checkbox1"> I have a mortage<br>
-<input type="checkbox" name="checkbox2" value="checkbox2"> I have a car payment<br>
-<input type="checkbox" name="checkbox3" value="checkbox3"> I have student loans<br>
-<input type="checkbox" name="checkbox4" value="checkbox4"> I have medical payments<br>
-<input type="checkbox" name="checkbox5" value="checkbox5"> I have credit card debit<br>
-<input type="checkbox" name="checkbox6" value="checkbox6"> I have child support payments<br>
-<input type="checkbox" name="checkbox7" value="checkbox7"> I have an outstanding financial judgement<br>
-<input type="checkbox" name="checkbox8" value="checkbox8"> I have a outstanding utlity payments<br>
-<input type="checkbox" name="checkbox9" value="checkbox9"> I have a boat which a horrible idea<br>
+<h1>Please enter your total financial obligations</h1>
+<div style="width: 30%; margin: 25px auto;">
+<form action="/budget/bankruptcy" method="POST">
+<div class="form-group">
+<h3>Income</h3>
+<label for="expense">What is your yearly income(after taxes): </label>
+<input type="text" name="housingName" placeholder="Expense" /><br/>
+ <label for="expense">Do you have an outstanding tax obligation: </label>
+<input type="number" name="housingAmount" placeholder="Expense-Amount" /><br>
+</div>
+<br>
+<br>
+<br>
+<h3>Housing</h3>
+<label for="expense">I have a mortage: </label></br>
+<input type="text" name="housingName" placeholder="Expense" /><br/>
+ <label for="expense">I have a rent obligation (amount * number of months): </label></br>
+<input type="number" name="housingAmount" placeholder="Expense-Amount" /><br>
+<label for="expense">I own a home (Appraisal rate for house): </label></br>
+<input type="number" name="housingAmount" placeholder="Expense-Amount" /><br>
+<br>
+<br>
+<h3>Transporation</h3>
+<label for="expense">I have a car payment: </label></br>
+<input type="text" name="transportationName" placeholder="Expense" /><br/>
+<br>
+<br>
+<h3>Health</h3>
+<label for="expense">Do you have health insurance (Yes or No): </label>
+<input type="text" name="insuranceName" placeholder="Expense" /><br/>
+ <label for="expense">Do you have outstanding medical bills: </label>
+<input type="number" name="insuranceAmount" placeholder="Expense-Amount" /><br>
+<br>
+<br>
+<h3>Legal</h3>
+<label for="expense">Do you have any pending legal cases: </label>
+<input type="text" name="entertainmentName" placeholder="Expense" /><br/>
+ <label for="expense">Do you have any pending legal settlement against you (Child support, car accident, speeding tickets): </label></br>
+<input type="number" name="entertainmentAmount" placeholder="Expense-Amount" /><br>
+<label for="expense">Do you have pending legal fees: </label>
+ <input type="text" name="entertainmentCategory" placeholder="category" /><br/>
+<br>
+<br>
+<h3>Savings</h3>
+<label for="expense">Total amount in checkings account: </label>
+<input type="text" name="savingName" placeholder="Expense" /><br/>
+ <label for="expense">Total amount in savings account: </label>
+<input type="number" name="savingAmount" placeholder="Expense-Amount" /><br>
+<label for="expense">Category: </label>
+ <input type="text" name="savingCategory" placeholder="category" /><br/>
+</div>
  <a class="button is-success" href="/budget">Back</a><br>
+   <input type="submit" value="Submit">
+ </form>
