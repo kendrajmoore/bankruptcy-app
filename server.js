@@ -63,7 +63,7 @@ app.set("view engine", "hbs");
 
 //index page
 app.get("/", (req, res) => {
-    res.render("homepage.hbs");
+    res.render("homepage.hbs", { currentUser: req.user });
 });
 
 //404 page
