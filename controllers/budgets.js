@@ -116,4 +116,15 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+//char
+
+router.get("/:id/api", (req, res) => {
+    Budget.findById(req.params.id).then(budget => {
+        if(budget){
+            console.log(budget);
+            res.send(budget)
+        }
+    })
+})
+
 module.exports = router;

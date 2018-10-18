@@ -1,49 +1,110 @@
-// Data
-var data            =   [ 35, 6, 20, 47, 19 ];
-var chart_width     =   600;
-var chart_height    =   600;
-var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
+//Get Budget Data
+let budgetId = document.getElementById('budgetId').value;
+axios.get(`/budget/${budgetId}/api`).then((response) => {
 
-// Pie Layout
-var pie             =   d3.pie();
+    // Data
+    var data            =   [ response.data.foodAmount, response.data.transportationAmount, response.data.insuranceAmount, response.data.clothingAmount, response.data.entertainmentAmount,response.data.housingAmount, response.data.savingAmount];
+    var chart_width     =   600;
+    var chart_height    =   600;
+    var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
 
-// Arc
-var outer_radius    =   chart_width / 2;
-var inner_radius    =   200;
-var arc             =   d3.arc()
-    .innerRadius( inner_radius )
-    .outerRadius( outer_radius );
+    // Pie Layout
+    var pie             =   d3.pie();
 
-//Create SVG Element
-var svg             =   d3.select("#chart")
-    .append("svg")
-    .attr("width", chart_width)
-    .attr("height", chart_height);
+    // Arc
+    var outer_radius    =   chart_width / 2;
+    var inner_radius    =   200;
+    var arc             =   d3.arc()
+        .innerRadius( inner_radius )
+        .outerRadius( outer_radius );
 
-// Groups
-var arcs            =   svg.selectAll( 'g.arc' )
-    .data( pie(data) )
-    .enter()
-    .append( 'g' )
-    .attr( 'class', 'arc' )
-    .attr(
-        'transform',
-        "translate(" + outer_radius + "," + chart_height / 2 + ")"
-    );
+    //Create SVG Element
+    var svg             =   d3.select("#chart")
+        .append("svg")
+        .attr("width", chart_width)
+        .attr("height", chart_height);
 
-// Arcs
-arcs.append( 'path' )
-    .attr( 'fill', function(d, i){
-        return color( i );
-    })
-    .attr( 'd', arc );
+    // Groups
+    var arcs            =   svg.selectAll( 'g.arc' )
+        .data( pie(data) )
+        .enter()
+        .append( 'g' )
+        .attr( 'class', 'arc' )
+        .attr(
+            'transform',
+            "translate(" + outer_radius + "," + chart_height / 2 + ")"
+        );
 
-// Labels
-arcs.append( 'text' )
-    .attr( 'transform', function(d, i){
-        return "translate(" + arc.centroid(d) + ")";
-    })
-    .attr( 'text-anchor', 'text-middle' )
-    .text(function(d){
-        return d.value;
-    });
+    // Arcs
+    arcs.append( 'path' )
+        .attr( 'fill', function(d, i){
+            return color( i );
+        })
+        .attr( 'd', arc );
+
+    // Labels
+    arcs.append( 'text' )
+        .attr( 'transform', function(d, i){
+            return "translate(" + arc.centroid(d) + ")";
+        })
+        .attr( 'text-anchor', 'text-middle' )
+        .text(function(d){
+            return d.value;
+        });
+
+
+    console.log(response.data);
+}).catch((err) => {
+    console.log(err);
+})
+
+
+// // Data
+// var data            =   [ 35, 6, 20, 47, 19 ];
+// var chart_width     =   600;
+// var chart_height    =   600;
+// var color           =   d3.scaleOrdinal( d3.schemeCategory10 );
+//
+// // Pie Layout
+// var pie             =   d3.pie();
+//
+// // Arc
+// var outer_radius    =   chart_width / 2;
+// var inner_radius    =   200;
+// var arc             =   d3.arc()
+//     .innerRadius( inner_radius )
+//     .outerRadius( outer_radius );
+//
+// //Create SVG Element
+// var svg             =   d3.select("#chart")
+//     .append("svg")
+//     .attr("width", chart_width)
+//     .attr("height", chart_height);
+//
+// // Groups
+// var arcs            =   svg.selectAll( 'g.arc' )
+//     .data( pie(data) )
+//     .enter()
+//     .append( 'g' )
+//     .attr( 'class', 'arc' )
+//     .attr(
+//         'transform',
+//         "translate(" + outer_radius + "," + chart_height / 2 + ")"
+//     );
+//
+// // Arcs
+// arcs.append( 'path' )
+//     .attr( 'fill', function(d, i){
+//         return color( i );
+//     })
+//     .attr( 'd', arc );
+//
+// // Labels
+// arcs.append( 'text' )
+//     .attr( 'transform', function(d, i){
+//         return "translate(" + arc.centroid(d) + ")";
+//     })
+//     .attr( 'text-anchor', 'text-middle' )
+//     .text(function(d){
+//         return d.value;
+//     });
