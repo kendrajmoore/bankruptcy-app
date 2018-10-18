@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const BudgetSchema = new Schema({
     createdAt: Date,
     updatedAt: Date,
+    author: { type: String, default: "None" },
     housingName: { type: String, default: "housing" },
     housingAmount: { type: String, default: 0 },
     housingCategory: { type: String, default: "None" },
