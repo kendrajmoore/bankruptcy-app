@@ -1,8 +1,8 @@
-# Money$ App
+# Monie$ App
 
 This app is intended to help with their budget and/ or file for bankruptcy
 
-**_Money$_**  Is an application created with Node, Express, MongoDB, Mongoose, and D3.js.
+**_Monie$_**  Is an application created with Node, Express, MongoDB, Mongoose, and D3.js.
 
 Official documentation: https://kendrajmoore.github.io/bankruptcy-app/
 
