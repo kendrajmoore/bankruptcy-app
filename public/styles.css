@@ -23,6 +23,8 @@
 
 .box {
     margin: 100px 0 0 0;
+    width: 350px;
+    height: 400px;
 }
 
 .homepage-title {

@@ -1,8 +1,8 @@
-# Bankruptcy App
+# Money$ App
 
 This app is intended to help with their budget and/ or file for bankruptcy
 
-**_BankruptcyApp_** Node using Express and connect to Mongo DB using Mongoose.
+**_Money$_**  Is an application created with Node, Express, MongoDB, Mongoose, and D3.js.
 
 Official documentation: https://kendrajmoore.github.io/bankruptcy-app/
 
