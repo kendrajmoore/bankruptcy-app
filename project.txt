@@ -11,3 +11,12 @@
 11. Update view if login in
 11. Add financial advice if a user needs bankruptcy
 13. test test test test
+
+
+Part II
+
+Add About us view
+About us css
+Update FOOTER
+Icons
+Picture
