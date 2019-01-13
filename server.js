@@ -6,6 +6,7 @@ const path = require("path");
 const hbs = require("express-handlebars");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
@@ -21,6 +22,7 @@ app.use(methodOverride("_method"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(cors());
 app.use(morgan("dev"));
 
 // static files middleware
