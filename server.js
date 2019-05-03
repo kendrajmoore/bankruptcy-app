@@ -31,7 +31,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Mongoose Connection
 const mongoUri =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/bankruptcy";
+  process.env.MONGODB_URI || "mongodb://mongo_bankrupty:27017/bankruptcy";
 mongoose.connect(
   mongoUri,
   { useNewUrlParser: true }
